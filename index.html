@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #timer {
+            font-size: 72px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #startBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #resetBtn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .mode-buttons {
+            margin-bottom: 20px;
+        }
+
+        .mode-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .active {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="mode-buttons">
+            <button class="mode-btn active" data-time="25">Pomodoro</button>
+            <button class="mode-btn" data-time="5">Short Break</button>
+            <button class="mode-btn" data-time="15">Long Break</button>
+        </div>
+        <div id="timer">25:00</div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
